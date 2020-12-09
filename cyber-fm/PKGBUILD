@@ -1,0 +1,31 @@
+pkgname=cyber-fm
+pkgver=r54.257ca25
+pkgrel=1
+pkgdesc=""
+arch=('x86_64')
+url=""
+license=('unknown')
+source=("$pkgname::git+https://github.com/cyberos/cyber-fm.git")
+md5sums=('SKIP')
+makedepends=('cmake')
+depends=('qt5-graphicaleffects'
+         'qt5-quickcontrols'
+         'qt5-base'
+         'meuikit')
+pkgver() {
+    cd "$pkgname"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+    cd "$pkgname"
+    mkdir -p build
+    cd build
+    cmake .. 
+    make -j$(nproc)
+}
+
+package() {
+    cd "$pkgname/build"
+    make DESTDIR="$pkgdir/" install
+}

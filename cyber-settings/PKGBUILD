@@ -1,0 +1,28 @@
+pkgname=cyber-settings
+pkgver=r17.27083b6
+pkgrel=1
+pkgdesc=""
+arch=('x86_64')
+url=""
+license=('unknown')
+source=("$pkgname::git+https://github.com/cyberos/cyber-settings.git")
+md5sums=('SKIP')
+makedepends=('cmake')
+depends=('qt5-quickcontrols2' 'meuikit')
+pkgver() {
+    cd "$pkgname"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+    cd "$pkgname"
+    mkdir -p build
+    cd build
+    cmake .. -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+    make -j$(nproc)
+}
+
+package() {
+    cd "$pkgname/build"
+    make DESTDIR="$pkgdir/" install
+}

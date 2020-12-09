@@ -1,0 +1,28 @@
+pkgname=cyber-recorder
+pkgver=r3.d0f766c
+pkgrel=1
+pkgdesc=""
+arch=('x86_64')
+url=""
+license=('unknown')
+source=("$pkgname::git+https://github.com/cyberos/cyber-recorder.git")
+md5sums=('SKIP')
+makedepends=('cmake' 'git')
+depends=('qt5-base' 'qt5-quickcontrols2' 'qt5-multimedia' 'meuikit')
+pkgver() {
+    cd "$pkgname"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+    cd "$pkgname"
+    mkdir -p build
+    cd build
+    cmake ..
+    make -j$(nproc)
+}
+
+package() {
+    cd "$pkgname/build"
+    make DESTDIR="$pkgdir/" install
+}

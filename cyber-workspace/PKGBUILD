@@ -1,0 +1,28 @@
+pkgname=cyber-workspace
+pkgver=r20.604add5
+pkgrel=1
+pkgdesc=""
+arch=('x86_64')
+url=""
+license=('unknown')
+source=("$pkgname::git+https://github.com/cyberos/cyber-workspace.git")
+md5sums=('SKIP')
+makedepends=('cmake' 'extra-cmake-modules')
+depends=('kwayland' 'kwindowsystem' 'kwin' 'qt5-base' 'qt5-tools' 'qt5-quickcontrols2' 'polkit' 'polkit-qt5' 'meuikit')
+pkgver() {
+    cd "$pkgname"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+    cd "$pkgname"
+    mkdir -p build
+    cd build
+    cmake ..
+    make -j$(nproc)
+}
+
+package() {
+    cd "$pkgname/build"
+    make DESTDIR="$pkgdir/" install
+}
