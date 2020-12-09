@@ -1,5 +1,5 @@
 pkgname=cyber-settings
-pkgver=r17.27083b6
+pkgver=r19.f0237b4
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')
