@@ -7,8 +7,8 @@ url=""
 license=('unknown')
 source=("$pkgname-src::git+https://github.com/cyberos/cyber-statusbar.git")
 md5sums=('SKIP')
-makedepends=('cmake')
-depends=('kwayland' 'qt5-base' 'qt5-quickcontrols2' 'kwindowsystem' 'meuikit')
+makedepends=('cmake' 'git')
+depends=('qt5-base' 'qt5-x11extras' 'qt5-quickcontrols2' 'dbus' 'meuikit' 'kwindowsystem')
 pkgver() {
     cd "$pkgname-src"
     printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
