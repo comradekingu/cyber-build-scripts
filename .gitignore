@@ -1,0 +1,5 @@
+# built packages 
+pkg/
+src/
+*-src/
+*.pkg.tar.zst

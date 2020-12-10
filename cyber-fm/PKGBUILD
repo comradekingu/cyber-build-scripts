@@ -5,7 +5,7 @@ pkgdesc=""
 arch=('x86_64')
 url=""
 license=('unknown')
-source=("$pkgname::git+https://github.com/cyberos/cyber-fm.git")
+source=("$pkgname-src::git+https://github.com/cyberos/cyber-fm.git")
 md5sums=('SKIP')
 makedepends=('cmake')
 depends=('qt5-graphicaleffects'
@@ -13,12 +13,12 @@ depends=('qt5-graphicaleffects'
          'qt5-base'
          'meuikit')
 pkgver() {
-    cd "$pkgname"
+    cd "$pkgname-src"
     printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 build() {
-    cd "$pkgname"
+    cd "$pkgname-src"
     mkdir -p build
     cd build
     cmake .. 
@@ -26,6 +26,6 @@ build() {
 }
 
 package() {
-    cd "$pkgname/build"
+    cd "$pkgname-src/build"
     make DESTDIR="$pkgdir/" install
 }
