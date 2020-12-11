@@ -1,5 +1,5 @@
 pkgname=cyber-calculator
-pkgver=r15.95e55a4
+pkgver=r18.c65c183
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')

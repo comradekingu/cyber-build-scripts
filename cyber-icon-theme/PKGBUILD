@@ -1,5 +1,5 @@
 pkgname=cyber-icon-theme
-pkgver=r2.5ef8acb
+pkgver=r3.bf560f8
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')

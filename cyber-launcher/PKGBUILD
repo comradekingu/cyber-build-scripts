@@ -1,5 +1,5 @@
 pkgname=cyber-launcher
-pkgver=r17.58036b8
+pkgver=r19.c931de0
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')
