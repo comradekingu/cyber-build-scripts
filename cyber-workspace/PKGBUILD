@@ -1,5 +1,5 @@
 pkgname=cyber-workspace
-pkgver=r37.3351723
+pkgver=r39.b58055f
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')
