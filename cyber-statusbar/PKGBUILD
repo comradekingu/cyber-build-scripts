@@ -1,5 +1,5 @@
 pkgname=cyber-statusbar
-pkgver=r38.902a6a2
+pkgver=r39.6ccd917
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')

@@ -1,5 +1,5 @@
 pkgname=meuikit
-pkgver=r19.2a20e11
+pkgver=r24.9539f0b
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')

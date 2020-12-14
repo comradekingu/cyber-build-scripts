@@ -1,5 +1,5 @@
 pkgname=cyber-settings
-pkgver=r37.e563427
+pkgver=r42.929fa1a
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')
@@ -8,7 +8,7 @@ license=('unknown')
 source=("$pkgname-src::git+https://github.com/cyberos/cyber-settings.git")
 md5sums=('SKIP')
 makedepends=('cmake' 'extra-cmake-modules' 'git')
-depends=('qt5-base' 'qt5-quickcontrols2' 'meuikit')
+depends=('qt5-base' 'qt5-quickcontrols2' 'meuikit' 'freetype2' 'fontconfig')
 pkgver() {
     cd "$pkgname-src"
     printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
