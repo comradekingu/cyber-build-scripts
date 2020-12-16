@@ -9,6 +9,7 @@ source=("$pkgname-src::git+https://github.com/cyberos/cyber-backgrounds.git")
 md5sums=('SKIP')
 makedepends=('cmake')
 depends=()
+groups=('cyber')
 pkgver() {
     cd "$pkgname-src"
     printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"

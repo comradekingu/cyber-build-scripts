@@ -9,6 +9,7 @@ source=("$pkgname-src::git+https://github.com/cyberos/cyber-kwin-plugins.git")
 md5sums=('SKIP')
 makedepends=('cmake' 'extra-cmake-modules' 'git')
 depends=('kwayland' 'qt5-base' 'qt5-declarative' 'kwindowsystem' 'kwayland' 'kwin' 'kconfigwidgets' 'kcoreaddons' 'kguiaddons' 'kdecoration' 'kconfig' )
+groups=('cyber')
 pkgver() {
     cd "$pkgname-src"
     printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
