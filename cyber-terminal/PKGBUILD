@@ -1,14 +1,14 @@
-pkgname=cyber-workspace
-pkgver=r55.60e2343
+pkgname=cyber-terminal
+pkgver=r1.b9da644
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')
 url=""
 license=('unknown')
-source=("$pkgname-src::git+https://github.com/cyberos/cyber-workspace.git")
+source=("$pkgname-src::git+https://github.com/cyberos/cyber-terminal.git")
 md5sums=('SKIP')
-makedepends=('cmake' 'extra-cmake-modules' 'git' 'pkgconf')
-depends=('kwayland' 'kwindowsystem' 'kwin' 'qt5-base' 'qt5-tools' 'qt5-quickcontrols2' 'polkit' 'polkit-qt5' 'meuikit' 'cyber-backgrounds')
+makedepends=('cmake' 'extra-cmake-modules' 'git')
+depends=('qt5-base' 'qt5-quickcontrols2' 'qt5-graphicaleffects' 'meuikit')
 groups=('cyber')
 pkgver() {
     cd "$pkgname-src"

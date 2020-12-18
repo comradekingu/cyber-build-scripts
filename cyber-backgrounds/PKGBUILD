@@ -1,5 +1,5 @@
 pkgname=cyber-backgrounds
-pkgver=0
+pkgver=r2.11cbeaa
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')

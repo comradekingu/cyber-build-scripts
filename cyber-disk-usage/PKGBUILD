@@ -1,5 +1,5 @@
 pkgname=cyber-disk-usage
-pkgver=r3.856e171
+pkgver=r5.dde8a87
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')
