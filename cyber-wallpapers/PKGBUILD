@@ -1,15 +1,16 @@
-pkgname=cyber-backgrounds
+pkgname=cyber-wallpapers
 pkgver=r2.11cbeaa
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')
 url=""
 license=('unknown')
-source=("$pkgname-src::git+https://github.com/cyberos/cyber-backgrounds.git")
+source=("$pkgname-src::git+https://github.com/cyberos/cyber-wallpapers.git")
 md5sums=('SKIP')
 makedepends=('cmake')
 depends=()
 groups=('cyber')
+replaces=('cyber-backgrounds')
 pkgver() {
     cd "$pkgname-src"
     printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
