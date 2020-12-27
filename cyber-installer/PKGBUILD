@@ -1,0 +1,29 @@
+pkgname=cyber-installer
+pkgver=0
+pkgrel=1
+pkgdesc=""
+arch=('x86_64')
+url=""
+license=('unknown')
+source=("$pkgname-src::git+https://github.com/cyberos/cyber-installer.git")
+md5sums=('SKIP')
+makedepends=('cmake' 'extra-cmake-modules' 'git')
+depends=('qt5-base' 'qt5-quickcontrols2' 'meuikit' 'arch-install-scripts' 'bash')
+groups=()
+pkgver() {
+    cd "$pkgname-src"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+    cd "$pkgname-src"
+    mkdir -p build
+    cd build
+    cmake .. -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
+    make -j$(nproc)
+}
+
+package() {
+    cd "$pkgname-src/build"
+    make DESTDIR="$pkgdir/" install
+}
