@@ -1,6 +1,6 @@
 pkgname=cyber-terminal
 pkgver=r15.bca4610
-pkgrel=2
+pkgrel=3
 pkgdesc=""
 arch=('x86_64')
 url=""
@@ -8,7 +8,7 @@ license=('unknown')
 source=("$pkgname-src::git+https://github.com/cyberos/cyber-terminal.git")
 md5sums=('SKIP')
 makedepends=('cmake' 'extra-cmake-modules' 'git')
-depends=('qt5-base' 'qt5-quickcontrols' 'meuikit' 'qmltermwidget')
+depends=('qt5-base' 'qt5-quickcontrols2' 'qt5-graphicaleffects' 'meuikit')
 groups=('cyber')
 pkgver() {
     cd "$pkgname-src"
