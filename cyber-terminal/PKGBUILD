@@ -1,6 +1,6 @@
 pkgname=cyber-terminal
-pkgver=r1.b9da644
-pkgrel=1
+pkgver=r15.bca4610
+pkgrel=2
 pkgdesc=""
 arch=('x86_64')
 url=""
@@ -16,7 +16,13 @@ pkgver() {
 }
 
 build() {
-    cd "$pkgname-src"
+    cd "$pkgname-src/qmltermwidget"
+	mkdir -p build
+	cd build
+	qmake ..
+	make -j$(nproc)
+
+	cd "../.."
     mkdir -p build
     cd build
     cmake ..
@@ -24,6 +30,8 @@ build() {
 }
 
 package() {
-    cd "$pkgname-src/build"
+	cd "$pkgname-src/qmltermwidget/build"
+	make INSTALL_ROOT="$pkgdir" install
+    cd "../../build"
     make DESTDIR="$pkgdir/" install
 }
