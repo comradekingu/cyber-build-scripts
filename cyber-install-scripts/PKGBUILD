@@ -11,13 +11,13 @@ source=("$pkgname-src::git+$url")
 md5sums=('SKIP')
 
 build() {
-  make -C "$pkgname"
+  make -C "$pkgname-src"
 }
 
 check() {
-  make -C "$pkgname" check
+  make -C "$pkgname-src" check
 }
 
 package() {
-  make -C "$pkgname" PREFIX=/usr DESTDIR="$pkgdir" install
+  make -C "$pkgname-src" PREFIX=/usr DESTDIR="$pkgdir" install
 }
