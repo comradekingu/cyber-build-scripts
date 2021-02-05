@@ -1,0 +1,32 @@
+pkgname=cyber-calamares
+pkgver=3.2.34
+_pkgver=3.2.34
+pkgrel=6
+pkgdesc='Distribution-independent installer framework'
+arch=('x86_64')
+license=(GPL)
+url="https://github.com/cyberos/calamares"
+license=('LGPL')
+depends=('kconfig' 'kcoreaddons' 'kiconthemes' 'ki18n' 'kio' 'solid' 'yaml-cpp' 'kpmcore>=4.2.0'
+         'boost-libs' 'hwinfo' 'qt5-svg' 'polkit-qt5' 'gtk-update-icon-cache' 'plasma-framework'
+         'qt5-xmlpatterns' 'squashfs-tools' 'libpwquality' 'appstream-qt' 'icu' 'cyber-install-scripts' 'arch-install-scripts')
+makedepends=('extra-cmake-modules' 'qt5-tools' 'qt5-translations' 'git' 'boost')
+source=("$pkgname-src::git+$url.git")
+md5sums=('SKIP')
+
+build() {
+	cd "$pkgname-src"
+
+	mkdir -p build
+	cd build
+        cmake .. \
+              -DCMAKE_BUILD_TYPE=Release \
+              -DCMAKE_INSTALL_PREFIX=/usr \
+              -DCMAKE_INSTALL_LIBDIR=lib
+        make -j$(nproc)
+}
+
+package() {
+	cd "$pkgname-src/build"
+	make DESTDIR="$pkgdir" install
+}
