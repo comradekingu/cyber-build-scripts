@@ -1,0 +1,30 @@
+pkgname=libcyber-system
+pkgver=r3.e0125fb
+pkgrel=1
+pkgdesc=""
+arch=('x86_64')
+url="https://github.com/cyberos/$pkgname"
+license=('unknown')
+source=("$pkgname-src::git+$url.git")
+md5sums=('SKIP')
+makedepends=('cmake' 'git')
+depends=('qt5-base' 'networkmanager-qt' 'modemmanager-qt')
+groups=('cyber')
+
+pkgver() {
+    cd "$pkgname-src"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+    cd "$pkgname-src"
+    mkdir -p build
+    cd build
+    cmake ..
+    make -j$(nproc)
+}
+
+package() {
+    cd "$pkgname-src/build"
+    make DESTDIR="$pkgdir/" install
+}
