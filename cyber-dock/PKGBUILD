@@ -1,6 +1,6 @@
 pkgname=cyber-dock
-pkgver=r56.1bcee34
-pkgrel=2
+pkgver=r148.9176696
+pkgrel=1
 pkgdesc=""
 arch=('x86_64')
 url=""

@@ -1,6 +1,6 @@
 pkgname=meuikit
-pkgver=r66.9f2f938
-pkgrel=3
+pkgver=r78.af589f2
+pkgrel=1
 pkgdesc=""
 arch=('x86_64')
 url=""

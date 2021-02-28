@@ -1,5 +1,5 @@
 pkgname=libcyber-system
-pkgver=r3.e0125fb
+pkgver=r8.8d7c5aa
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')

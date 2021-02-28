@@ -1,5 +1,5 @@
 pkgname=cyber-fm
-pkgver=r2.e5c6a79
+pkgver=r75.76367f3
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')
