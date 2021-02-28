@@ -1,3 +1,6 @@
 [submodule "cyberos-filesystem"]
 	path = cyberos-filesystem
 	url = https://github.com/cyberos/cyberos-filesystem
+[submodule "cyberos-base"]
+	path = cyberos-base
+	url = https://github.com/cyberos/cyberos-base
