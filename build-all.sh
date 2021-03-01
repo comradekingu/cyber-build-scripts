@@ -1,5 +1,5 @@
 #!/bin/bash -e
-for f in m* lib* cy*; do
+for f in */; do
     cd $f
     echo "==> Building $f..."
     makepkg -sf --noconfirm
