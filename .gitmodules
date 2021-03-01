@@ -4,3 +4,6 @@
 [submodule "cyberos-base"]
 	path = cyberos-base
 	url = https://github.com/cyberos/cyberos-base
+[submodule "cyberos-keyring"]
+	path = cyberos-keyring
+	url = https://github.com/cyberos/cyberos-keyring

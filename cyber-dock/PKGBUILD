@@ -1,5 +1,5 @@
 pkgname=cyber-dock
-pkgver=r148.9176696
+pkgver=r149.364b190
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')
