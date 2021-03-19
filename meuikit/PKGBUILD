@@ -9,7 +9,7 @@ source=("$pkgname-src::git+https://github.com/cyberos/meuikit.git")
 md5sums=('SKIP')
 makedepends=('cmake' 'extra-cmake-modules' 'git')
 depends=('qt5-base' 'qt5-quickcontrols2' 'qt5-x11extras' 'dbus' 'kwindowsystem')
-groups=('cyber')
+
 pkgver() {
     cd "$pkgname-src"
     printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"

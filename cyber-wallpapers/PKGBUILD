@@ -9,7 +9,7 @@ source=("$pkgname-src::git+https://github.com/cyberos/cyber-wallpapers.git")
 md5sums=('SKIP')
 makedepends=('cmake')
 depends=()
-groups=('cyber')
+
 replaces=('cyber-backgrounds')
 pkgver() {
     cd "$pkgname-src"

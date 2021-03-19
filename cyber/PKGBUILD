@@ -1,0 +1,33 @@
+# Maintainer: omame <me@omame.tech>
+
+pkgname=cyber
+pkgver=2020.03.19
+pkgrel=1
+pkgdesc='Cyber metapackage'
+url='https://cyberos.github.io'
+arch=('x86_64')
+license=('GPL')
+depends=(
+  'xorg-server'
+  
+  # base
+  'libcyber-system'
+  'meuikit'
+  'cyber-qt-plugins'
+  'cyber-kwin-plugins'
+
+  # base workspace
+  'cyber-workspace'
+  'cyber-wallpapers'
+  'cyber-settings'
+  'cyber-icon-theme'
+  'cyber-dock'
+  'cyber-launcher'
+  
+  # apps
+  'cyber-terminal'
+  'cyber-recorder'
+  'cyber-fm'
+  'cyber-disk-usage'
+  'cyber-calculator'
+)
