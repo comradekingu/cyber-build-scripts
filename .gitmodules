@@ -7,3 +7,6 @@
 [submodule "cyberos-keyring"]
 	path = cyberos-keyring
 	url = https://github.com/cyberos/cyberos-keyring
+[submodule "lsb-release"]
+	path = lsb-release
+	url = https://github.com/cyberos/lsb-release.git
