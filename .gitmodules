@@ -10,3 +10,6 @@
 [submodule "lsb-release"]
 	path = lsb-release
 	url = https://github.com/cyberos/lsb-release.git
+[submodule "cyberos-mirrorlist"]
+	path = cyberos-mirrorlist
+	url = https://github.com/cyberos/cyberos-mirrorlist.git
