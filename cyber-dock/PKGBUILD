@@ -7,7 +7,7 @@ url=""
 license=('unknown')
 source=("$pkgname-src::git+https://github.com/cyberos/cyber-dock.git")
 md5sums=('SKIP')
-makedepends=('cmake' 'git')
+makedepends=('cmake' 'git' 'gt5-tools')
 depends=('kwayland' 'qt5-base' 'qt5-quickcontrols2' 'kwindowsystem' 'meuikit' 'libcyber-system')
 
 pkgver() {
