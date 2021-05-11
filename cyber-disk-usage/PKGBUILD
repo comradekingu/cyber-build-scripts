@@ -1,6 +1,6 @@
 pkgname=cyber-disk-usage
-pkgver=r33.77b2cab
-pkgrel=1
+pkgver=r74.f2d75aa
+pkgrel=2
 pkgdesc=""
 arch=('x86_64')
 url=""
@@ -8,7 +8,7 @@ license=('unknown')
 source=("$pkgname-src::git+https://github.com/cyberos/cyber-disk-usage.git")
 md5sums=('SKIP')
 makedepends=('cmake' 'git' 'qt5-tools')
-depends=('qt5-base' 'qt5-quickcontrols2' 'meuikit')
+depends=('qt5-base' 'qt5-quickcontrols2' 'meuikit' 'udisks2-qt5')
 
 pkgver() {
     cd "$pkgname-src"
