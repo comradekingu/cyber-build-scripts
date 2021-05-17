@@ -8,7 +8,7 @@ license=('unknown')
 source=("$pkgname-src::git+$url.git")
 md5sums=('SKIP')
 makedepends=('cmake' 'git')
-depends=('qt5-base' 'networkmanager-qt' 'modemmanager-qt')
+depends=('qt5-base' 'networkmanager-qt' 'modemmanager-qt' 'kscreen')
 
 
 pkgver() {
