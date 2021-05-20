@@ -3,6 +3,7 @@
 PACKAGES=(
     'meuikit'
     'libcyber-system'
+    'qhotkey'
     'cyber-calculator'
     'cyber-disk-usage'
     'cyber-dock'
