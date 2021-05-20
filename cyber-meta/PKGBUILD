@@ -1,8 +1,8 @@
 # Maintainer: omame <me@omame.tech>
 
 pkgname=cyber-meta
-pkgver=2020.03.19
-pkgrel=2
+pkgver=2021.05.20
+pkgrel=1
 pkgdesc='Cyber metapackage'
 url='https://cyberos.github.io'
 arch=('x86_64')
@@ -30,6 +30,7 @@ depends=(
   'cyber-fm'
   'cyber-disk-usage'
   'cyber-calculator'
+  'cyber-edit'
 )
 provides=('cyber')
 replaces=('cyber')

@@ -1,0 +1,29 @@
+pkgname=cyber-edit
+pkgver=r8.adf6f4c
+pkgrel=1
+pkgdesc=""
+arch=('x86_64')
+url=""
+license=('unknown')
+source=("$pkgname-src::git+https://github.com/cyberos/cyber-edit.git")
+md5sums=('SKIP')
+makedepends=('cmake' 'git' 'qt5-tools')
+depends=('qt5-base' 'meuikit')
+
+pkgver() {
+    cd "$pkgname-src"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+    cd "$pkgname-src"
+    mkdir -p build
+    cd build
+    cmake ..
+    make
+}
+
+package() {
+    cd "$pkgname-src/build"
+    make DESTDIR="$pkgdir/" install
+}
